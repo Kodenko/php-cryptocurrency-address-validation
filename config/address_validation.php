@@ -105,4 +105,10 @@ return [
             ['t' => '1C'],
         ),
     ],
+    CurrencyEnum::TON->value => [
+        new DriverConfig(
+            Drivers\Base64Crc16Driver::class,
+            ['T' => '41'],
+        ),
+    ],
 ];

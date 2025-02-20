@@ -18,4 +18,5 @@ enum CurrencyEnum: string
     case RIPPLE = 'ripple';
     case TRON = 'tron';
     case ZCASH = 'zcash';
+    case TON = 'ton';
 }
