@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Merkeleon\PhpCryptocurrencyAddressValidation\Drivers;
 
+use Illuminate\Support\Str;
 use Merkeleon\PhpCryptocurrencyAddressValidation\Utils\Base64Decoder;
 
 class Base64Crc16Driver extends AbstractDriver
 {
     public function match(string $address): bool
     {
-        return $this->getPattern($address) === 1;
+        return $this->getPattern($address) === true;
     }
 
     public function check(string $address): bool
@@ -66,9 +67,18 @@ class Base64Crc16Driver extends AbstractDriver
         return sprintf('%04x', $crc);
     }
 
-    private function getPattern(string $address): false|int
+    private function getPattern(string $address): true
     {
+        $start =   Str::startsWith($address, ['UQ', 'EQ', 'kQ', '0Q', 'Uf', 'EF', '0f']);
+        $lenght =  strlen($address) === 48;
+        $base64 = $this->isBase64UrlSafe($address);
 
-        return preg_match('/^(UQ|EQ|kQ|0Q|Uf|EF)[A-Za-z0-9\-_]{46}$/', $address);
+        return $start && $lenght && $base64;
     }
+
+    private function isBase64UrlSafe(string $address): bool
+    {
+        return (bool)preg_match('#^[A-Za-z0-9+/_-]+$#', $address);
+    }
+
 }
