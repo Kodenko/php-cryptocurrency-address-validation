@@ -67,7 +67,7 @@ class Base64Crc16Driver extends AbstractDriver
         return sprintf('%04x', $crc);
     }
 
-    private function getPattern(string $address): true
+    private function getPattern(string $address): bool
     {
         $start =   Str::startsWith($address, ['UQ', 'EQ', 'kQ', '0Q', 'Uf', 'EF', '0f']);
         $lenght =  strlen($address) === 48;
