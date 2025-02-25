@@ -37,6 +37,16 @@ return [
             ['bc' => null],
             ['tb' => null, 'bcrt' => null]
         ),
+        new DriverConfig(
+            Drivers\Base32Driver::class,
+            ['bitcoincash:' => null],
+            ['bchtest:' => null, 'bchreg:' => null,]
+        ),
+        new DriverConfig(
+            Drivers\DefaultBase58Driver::class,
+            ['1' => '00', '3' => '05'],
+            ['2' => 'C4', 'm' => '6F']
+        ),
     ],
     CurrencyEnum::CARDANO->value => [
         new DriverConfig(
