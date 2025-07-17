@@ -11,8 +11,8 @@
         "php": "^8.2",
         "ext-gmp": "*",
         "ext-bcmath": "*",
-        "laravel/framework": ">=v7.0.0|>=v11.0.2",
-        "spomky-labs/cbor-php": "^3.0"
+        "laravel/framework": ">=v7.0.0|>=v11.0.2||>=v12.0.2",
+        "spomky-labs/cbor-php": "^3.1"
     },
     "scripts": {
         "test": "@php vendor/bin/phpunit"
