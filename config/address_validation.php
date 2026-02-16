@@ -121,4 +121,20 @@ return [
             ['T' => '41'],
         ),
     ],
+
+    CurrencyEnum::ARBITRUM->value => [
+        new DriverConfig(Drivers\KeccakStrictDriver::class),
+    ],
+
+    CurrencyEnum::BASE->value => [
+        new DriverConfig(Drivers\KeccakStrictDriver::class),
+    ],
+
+    CurrencyEnum::OPTIMISM->value => [
+        new DriverConfig(Drivers\KeccakStrictDriver::class),
+    ],
+
+    CurrencyEnum::POLYGON->value => [
+        new DriverConfig(Drivers\KeccakStrictDriver::class),
+    ],
 ];
