@@ -23,4 +23,5 @@ enum CurrencyEnum: string
     case POLYGON = 'polygon';
     case BASE = 'base';
     case OPTIMISM = 'optimism';
+    case BNB = 'bnb';
 }

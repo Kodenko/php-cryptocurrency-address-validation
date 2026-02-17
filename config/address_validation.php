@@ -137,4 +137,8 @@ return [
     CurrencyEnum::POLYGON->value => [
         new DriverConfig(Drivers\KeccakStrictDriver::class),
     ],
+
+    CurrencyEnum::BNB->value => [
+        new DriverConfig(Drivers\KeccakStrictDriver::class),
+    ],
 ];
