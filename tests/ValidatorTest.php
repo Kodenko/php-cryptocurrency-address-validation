@@ -118,6 +118,16 @@ class ValidatorTest extends TestCase
             //
             'EOS #1' => [CurrencyEnum::EOS, 'mainnet', true, 'atticlabeosb'],
             'EOS #2' => [CurrencyEnum::EOS, 'mainnet', true, 'bitfinexeos1'],
+            //
+            'Solana #1' => [CurrencyEnum::SOLANA, 'mainnet', true, '9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM'],
+            'Solana #2' => [CurrencyEnum::SOLANA, 'mainnet', true, 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB'],
+            'Solana #3' => [CurrencyEnum::SOLANA, 'mainnet', true, 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v'],
+            'Solana #4' => [CurrencyEnum::SOLANA, 'mainnet', true, '11111111111111111111111111111111'],
+            'Solana #5' => [CurrencyEnum::SOLANA, 'mainnet', true, 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA'],
+            'Solana #6' => [CurrencyEnum::SOLANA, 'mainnet', false, '9WzDXwBbmkg'],
+            'Solana #7' => [CurrencyEnum::SOLANA, 'mainnet', false, '9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWMXXXXXX'],
+            'Solana #8' => [CurrencyEnum::SOLANA, 'mainnet', false, '0WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM'],
+            'Solana #9' => [CurrencyEnum::SOLANA, 'mainnet', false, 'OWzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM'],
         ];
     }
 }

@@ -141,4 +141,8 @@ return [
     CurrencyEnum::BNB->value => [
         new DriverConfig(Drivers\KeccakStrictDriver::class),
     ],
+
+    CurrencyEnum::SOLANA->value => [
+        new DriverConfig(Drivers\SolanaDriver::class),
+    ],
 ];
